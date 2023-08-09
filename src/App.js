@@ -1,5 +1,11 @@
 import "./App.css";
 import React, { useState } from "react";
+import journey1 from "./images/journeyIMG1.png";
+import journey2 from "./images/journeyIMG2.png";
+import journey3 from "./images/journeyIMG3.png";
+import journey4 from "./images/journeyIMG4.png";
+import journey5 from "./images/journeyIMG5.png";
+import squigly from "./images/squigly.png";
 
 function App() {
   const [selected, setSelected] = useState("research");
@@ -57,11 +63,11 @@ function App() {
                 onChange={handleRadioChange}
               />
               <img
-                src="https://www.moonind.com/assets/images/c1.jpg"
+                src={journey1}
                 alt="research"
               />
             </label>
-            <div className="squigly"></div>
+            {selected === "research" && <img src={squigly} className="squigly" alt="squigly line"></img>}
           </div>
           <div className="selector">
             <label className="radio-label">
@@ -73,11 +79,11 @@ function App() {
                 onChange={handleRadioChange}
               />
               <img
-                src="https://www.moonind.com/assets/images/c1.jpg"
+                src={journey2}
                 alt="graduate"
               />
             </label>
-            <div className="squigly"></div>
+            {selected === "graduate" && <img src={squigly} className="squigly" alt="squigly line"></img>}
           </div>
           <div className="selector">
             <label className="radio-label">
@@ -89,11 +95,11 @@ function App() {
                 onChange={handleRadioChange}
               />
               <img
-                src="https://www.moonind.com/assets/images/c1.jpg"
+                src={journey3}
                 alt="network"
               />
             </label>
-            <div className="squigly"></div>
+            {selected === "network" && <img src={squigly} className="squigly" alt="squigly line"></img>}
           </div>
           <div className="selector">
             <label className="radio-label">
@@ -105,11 +111,11 @@ function App() {
                 onChange={handleRadioChange}
               />
               <img
-                src="https://www.moonind.com/assets/images/c1.jpg"
+                src={journey4}
                 alt="apply"
               />
             </label>
-            <div className="squigly"></div>
+            {selected === "apply" && <img src={squigly} className="squigly" alt="squigly line"></img>}
           </div>
           <div className="selector">
             <label className="radio-label">
@@ -121,11 +127,11 @@ function App() {
                 onChange={handleRadioChange}
               />
               <img
-                src="https://www.moonind.com/assets/images/c1.jpg"
+                src={journey5}
                 alt="employment"
               />
             </label>
-            <div className="squigly"></div>
+            {selected === "employment" && <img src={squigly} className="squigly" alt="squigly line"></img>}
           </div>
         </div>
         <div className="msgContainer">
