@@ -5,9 +5,12 @@ function App() {
   const [selected, setSelected] = useState("research");
 
   console.log(selected);
+//TODO download images and insert them
+//TODO downliad squigly and insert
+//TODO setup squigly to only show on selected radio
 
   //This object contains the contents for each message blurb
-  const displayConent = {
+  const displayContent = {
     research: {
       title: "Research",
       message:
@@ -127,11 +130,8 @@ function App() {
         </div>
         <div className="msgContainer">
           <div className="msg">
-            <h3>Dynamic Content</h3>
-            <p>
-              The conent displayed here will dynamically change depending on
-              which tab is selected. the message box will also shift.
-            </p>
+            <h3>{displayContent[selected].title}</h3>
+            <p>{displayContent[selected].message}</p>
           </div>
         </div>
       </section>
