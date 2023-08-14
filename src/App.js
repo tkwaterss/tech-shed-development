@@ -11,9 +11,9 @@ function App() {
   const [selected, setSelected] = useState("research");
 
   console.log(selected);
-//TODO download images and insert them
-//TODO downliad squigly and insert
-//TODO setup squigly to only show on selected radio
+  //TODO download images and insert them
+  //TODO downliad squigly and insert
+  //TODO setup squigly to only show on selected radio
 
   //This object contains the contents for each message blurb
   const displayContent = {
@@ -62,12 +62,11 @@ function App() {
                 checked={selected === "research"}
                 onChange={handleRadioChange}
               />
-              <img
-                src={journey1}
-                alt="research"
-              />
+              <img src={journey1} alt="research" />
             </label>
-            {selected === "research" && <img src={squigly} className="squigly" alt="squigly line"></img>}
+            {selected === "research" && (
+              <img src={squigly} className="squigly" alt="squigly line"></img>
+            )}
           </div>
           <div className="selector">
             <label className="radio-label">
@@ -78,12 +77,11 @@ function App() {
                 checked={selected === "graduate"}
                 onChange={handleRadioChange}
               />
-              <img
-                src={journey2}
-                alt="graduate"
-              />
+              <img src={journey2} alt="graduate" />
             </label>
-            {selected === "graduate" && <img src={squigly} className="squigly" alt="squigly line"></img>}
+            {selected === "graduate" && (
+              <img src={squigly} className="squigly" alt="squigly line"></img>
+            )}
           </div>
           <div className="selector">
             <label className="radio-label">
@@ -94,12 +92,11 @@ function App() {
                 checked={selected === "network"}
                 onChange={handleRadioChange}
               />
-              <img
-                src={journey3}
-                alt="network"
-              />
+              <img src={journey3} alt="network" />
             </label>
-            {selected === "network" && <img src={squigly} className="squigly" alt="squigly line"></img>}
+            {selected === "network" && (
+              <img src={squigly} className="squigly" alt="squigly line"></img>
+            )}
           </div>
           <div className="selector">
             <label className="radio-label">
@@ -110,12 +107,11 @@ function App() {
                 checked={selected === "apply"}
                 onChange={handleRadioChange}
               />
-              <img
-                src={journey4}
-                alt="apply"
-              />
+              <img src={journey4} alt="apply" />
             </label>
-            {selected === "apply" && <img src={squigly} className="squigly" alt="squigly line"></img>}
+            {selected === "apply" && (
+              <img src={squigly} className="squigly" alt="squigly line"></img>
+            )}
           </div>
           <div className="selector">
             <label className="radio-label">
@@ -126,16 +122,15 @@ function App() {
                 checked={selected === "employment"}
                 onChange={handleRadioChange}
               />
-              <img
-                src={journey5}
-                alt="employment"
-              />
+              <img src={journey5} alt="employment" />
             </label>
-            {selected === "employment" && <img src={squigly} className="squigly" alt="squigly line"></img>}
+            {selected === "employment" && (
+              <img src={squigly} className="squigly" alt="squigly line"></img>
+            )}
           </div>
         </div>
         <div className="msgContainer">
-          <div className="msg">
+          <div className="msg arrow-top">
             <h3>{displayContent[selected].title}</h3>
             <p>{displayContent[selected].message}</p>
           </div>

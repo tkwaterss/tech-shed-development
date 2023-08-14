@@ -20,6 +20,9 @@ section {
   align-items: center;
   gap: 50px;
 }
+
+/*^ Radio Btns Group  */
+
 .btnsContainer {
   background-color: #b86f52;
   height: 188px;
@@ -38,29 +41,6 @@ section {
   width: 100px;
   height: 10px;
 }
-
-.msgContainer {
-  width: 1200px;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-}
-.msg {
-  width: 800px;
-  height: 400px;
-  background-color: #b86f52;
-  border-radius: 40px;
-  padding: 40px;
-  line-height: 3.5rem;
-}
-.msg h3 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-.msg p {
-  font-size: 2.8rem;
-}
-
 
 .radio-label {
   position: relative;
@@ -88,4 +68,40 @@ section {
   box-shadow: #000000 0px 14px 20px -10px;
   transform: translate(0px, -10px);
   opacity: 1;
+}
+
+/*^ Msg Container  */
+
+.msgContainer {
+  width: 1200px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+}
+.msg {
+  width: 800px;
+  height: 400px;
+  background-color: #b86f52;
+  color: white;
+  border-radius: 40px;
+  padding: 40px;
+  line-height: 3.5rem;
+  position: relative;
+}
+.msg h3 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.msg p {
+  font-size: 2.8rem;
+}
+.msg.arrow-top:after {
+  content: " ";
+  position: absolute;
+  left: 500px;
+  top: -20px;
+  border-top: none;
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  border-bottom: 20px solid #b86f52;
 }
